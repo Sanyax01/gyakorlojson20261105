@@ -27,12 +27,16 @@ for (const adat of adatok.products) {
 
     const Price = document.createElement('p');
     Price.classList.add('card-text');
-    Price.textContent = `Price: $${adat.price.toFixed(2)}`;
+    Price.textContent = `Price: $${adat.price.toFixed(2) } Ft`;
     cardBody.appendChild(Price);
 
     const Button = document.createElement('button');
     Button.classList.add('btn', 'btn-primary');
     Button.textContent = 'Reservation';
+    Button.addEventListener('click', () => {
+        alert("Successful reservation!");
+        //setInterval(function(){ alert("Successful reservation!"); }, 3000);
+    });
     cardBody.appendChild(Button);  
   
     
